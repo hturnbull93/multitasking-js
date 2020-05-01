@@ -49,8 +49,10 @@ function groceryShopping() {
   goToShops()
   let shoppingBags = [...shops.items]
   goHome()
-  home.fridge.contents = [...shoppingBags]
-  console.log("Shopping is in the fridge")
+  setTimeout(() => {
+    home.fridge.contents = [...shoppingBags]
+    console.log("Shopping is in the fridge")
+  }, 0);
 }
 
 function receiveFridge() {
@@ -60,10 +62,6 @@ function receiveFridge() {
   console.log("Installed fridge")
 }
 
-// Calling the functions in this order will raise an error
-// groceryShopping()
-// receiveFridge()
-
-// Calling the functions in this order will work
-receiveFridge()
+// Calling the functions in this order will now work
 groceryShopping()
+receiveFridge()
