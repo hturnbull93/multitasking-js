@@ -60,5 +60,10 @@ function receiveFridge() {
   console.log("Installed fridge")
 }
 
-groceryShopping()
+// Calling the functions in this order will raise an error
+// groceryShopping()
+// receiveFridge()
+
+// Calling the functions in this order will work
 receiveFridge()
+groceryShopping()
