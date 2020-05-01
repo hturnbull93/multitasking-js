@@ -1,22 +1,22 @@
 var shops = {
-  items: ["ham", "eggs", "spam"]
+  items: ["ham", "eggs", "spam"],
 };
 
 var home = {
-  fridge: null
+  fridge: null,
 };
 
 var delivery = {
   fridge: {
     contents: [],
-    installed: false
-  }
+    installed: false,
+  },
 };
 
 function groceryShopping() {
-  console.log("Going to shops")
+  console.log("Going to shops");
   let shoppingBags = [...shops.items];
-  console.log("Going home")
+  console.log("Going home");
   setTimeout(() => {
     home.fridge.contents = [...shoppingBags];
     console.log("Shopping is in the fridge");
@@ -24,7 +24,7 @@ function groceryShopping() {
 }
 
 function receiveFridge() {
-  console.log("Waiting for delivery")
+  console.log("Waiting for delivery");
   home.fridge = delivery.fridge;
   home.fridge.installed = true;
   console.log("Installed fridge");
